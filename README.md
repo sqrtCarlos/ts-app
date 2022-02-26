@@ -1,8 +1,16 @@
 # Serverless Framework Node Endpoint on AWS
 
-Simple function in Typescript with serverless framework
+Simple function in Typescript with serverless 
 
 ## Usage
+
+### Install dependencies
+
+Do an npm install for installing all the project dependencies.
+
+```
+$ npm install
+```
 
 ### Deployment
 
