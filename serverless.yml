@@ -1,0 +1,25 @@
+service: aws-node-rest-api
+
+frameworkVersion: '3'
+
+plugins:
+  - serverless-offline
+  - serverless-plugin-typescript
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: us-east-2
+  lambdaHashingVersion: '20201221'
+
+functions:
+  hello:
+    handler: src/functions/index.hello
+    description: Excerise in serverless frameworks, a simple response
+    memorySize: 256
+    events:
+      - http:
+          path: /
+          method: get
+          cors: true
